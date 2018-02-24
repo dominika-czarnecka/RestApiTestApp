@@ -9,8 +9,6 @@
 import UIKit
 
 class BaseView: UIView {
-
-    internal var space: CGFloat = 30
     
     internal init() {
         super.init(frame: .zero)

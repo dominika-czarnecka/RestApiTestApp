@@ -24,6 +24,9 @@
 		157F209E2041613A00D7880D /* CentralInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F209C2041613A00D7880D /* CentralInformationView.swift */; };
 		157F209F2041613A00D7880D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F209D2041613A00D7880D /* BaseView.swift */; };
 		157F20A12041637000D7880D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20A02041637000D7880D /* BaseViewController.swift */; };
+		157F20A320416A2E00D7880D /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20A220416A2E00D7880D /* Sizes.swift */; };
+		157F20A62041743F00D7880D /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20A52041743F00D7880D /* SectionTableViewCell.swift */; };
+		157F20AA20417B7900D7880D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20A920417B7900D7880D /* BaseTableViewCell.swift */; };
 		9E154EFFA483547D5AD61EA4 /* Pods_FibaroRecruitmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5265F95E460DF8C64A4F877 /* Pods_FibaroRecruitmentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +71,9 @@
 		157F209C2041613A00D7880D /* CentralInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralInformationView.swift; sourceTree = "<group>"; };
 		157F209D2041613A00D7880D /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		157F20A02041637000D7880D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		157F20A220416A2E00D7880D /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		157F20A52041743F00D7880D /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
+		157F20A920417B7900D7880D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		294AC85B38312B28B8677916 /* Pods-FibaroRecruitmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5265F95E460DF8C64A4F877 /* Pods_FibaroRecruitmentApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FibaroRecruitmentApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C202C8F6A245698FB3E10C2E /* Pods-FibaroRecruitmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 		1544FD1F20415709001CBBDB /* FibaroRecruitmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				157F20A820417B3800D7880D /* Base */,
 				157F208A204160EE00D7880D /* API */,
 				157F2083204160ED00D7880D /* Enums */,
 				157F2085204160ED00D7880D /* Extension */,
@@ -168,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				157F2086204160ED00D7880D /* String+Extensions.swift */,
+				157F20A220416A2E00D7880D /* Sizes.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -185,8 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				157F208B204160EE00D7880D /* ApiManager.swift */,
-				157F208C204160EE00D7880D /* Requests */,
 				157F208F204160EE00D7880D /* APIRequest.swift */,
+				157F208C204160EE00D7880D /* Requests */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -204,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				157F2091204160EE00D7880D /* MainViewController.swift */,
-				157F20A02041637000D7880D /* BaseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,10 +219,28 @@
 		157F209B2041613A00D7880D /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				157F20A72041752100D7880D /* TableViewCells */,
 				157F209C2041613A00D7880D /* CentralInformationView.swift */,
-				157F209D2041613A00D7880D /* BaseView.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		157F20A72041752100D7880D /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				157F20A52041743F00D7880D /* SectionTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		157F20A820417B3800D7880D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				157F20A02041637000D7880D /* BaseViewController.swift */,
+				157F209D2041613A00D7880D /* BaseView.swift */,
+				157F20A920417B7900D7880D /* BaseTableViewCell.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		21987B7BB919861606017CFF /* Frameworks */ = {
@@ -435,12 +460,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				157F20AA20417B7900D7880D /* BaseTableViewCell.swift in Sources */,
 				157F20A12041637000D7880D /* BaseViewController.swift in Sources */,
 				157F2094204160EE00D7880D /* SectionObject.swift in Sources */,
 				157F209A204160EE00D7880D /* MainViewController.swift in Sources */,
+				157F20A62041743F00D7880D /* SectionTableViewCell.swift in Sources */,
 				157F2097204160EE00D7880D /* CentralRequest.swift in Sources */,
 				157F209F2041613A00D7880D /* BaseView.swift in Sources */,
 				157F2093204160EE00D7880D /* String+Extensions.swift in Sources */,
+				157F20A320416A2E00D7880D /* Sizes.swift in Sources */,
 				157F2096204160EE00D7880D /* ApiManager.swift in Sources */,
 				157F209E2041613A00D7880D /* CentralInformationView.swift in Sources */,
 				1544FD2120415709001CBBDB /* AppDelegate.swift in Sources */,
