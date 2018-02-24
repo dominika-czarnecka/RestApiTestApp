@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class BaseViewController: UIViewController {
+    
+    internal let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,10 +20,13 @@ class BaseViewController: UIViewController {
         
         configureSubViews()
         configureConstraints()
+        bind()
         
     }
     
     func configureSubViews() { }
     
     func configureConstraints() { }
+    
+    func bind() {}
 }

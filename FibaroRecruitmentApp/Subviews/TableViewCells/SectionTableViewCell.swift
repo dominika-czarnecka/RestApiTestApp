@@ -11,7 +11,7 @@ import UIKit
 class SectionTableViewCell: BaseTableViewCell {
 
     private let mainSubview = UIView()
-    private let nameLabel = UILabel()
+    let nameLabel = UILabel()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -31,7 +31,7 @@ class SectionTableViewCell: BaseTableViewCell {
         addSubview(mainSubview)
         
         nameLabel.textAlignment = .center
-        nameLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        nameLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         nameLabel.textColor = .gray
         addSubview(nameLabel)
         
@@ -50,16 +50,12 @@ class SectionTableViewCell: BaseTableViewCell {
         ])
         
         NSLayoutConstraint.activate([
-            nameLabel.centerYAnchor.constraint(equalTo: mainSubview.centerYAnchor),
             nameLabel.centerXAnchor.constraint(equalTo: mainSubview.centerXAnchor),
-            nameLabel.heightAnchor.constraint(equalTo: heightAnchor),
+            nameLabel.topAnchor.constraint(equalTo: mainSubview.topAnchor, constant: .margin),
+            nameLabel.bottomAnchor.constraint(equalTo: mainSubview.bottomAnchor, constant: -.margin),
             nameLabel.widthAnchor.constraint(equalTo: widthAnchor)
         ])
         
-    }
-    
-    func configure(_ object: SectionObject) {
-        nameLabel.text = object.name
     }
     
 }

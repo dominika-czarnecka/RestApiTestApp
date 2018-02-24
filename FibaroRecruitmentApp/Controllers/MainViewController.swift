@@ -15,9 +15,6 @@ class MainViewController: BaseViewController {
     let centralInformationView = CentralInformationView()
     let sectionsTableView = UITableView()
     private var cellIndentifier = "sectionCell"
-
-    private let apiManager = ApiManager()
-    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +52,20 @@ class MainViewController: BaseViewController {
         
     }
     
+    override func bind() {
+        
+        sectionsTableView.rx.modelSelected(SectionObject.self)
+            .subscribe(onNext: { (section) in
+                self.navigationController?.pushViewController(SectionViewController(section), animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+    }
+    
     private func getCentralFromServer() {
 
+        guard let apiManager = (UIApplication.shared.delegate as? AppDelegate)?.apiManager else { return }
+        
         let _ = apiManager.send(apiRequest: CentralRequest())
             .subscribe(onNext: { [weak self] (object) in
                 DispatchQueue.main.async {
@@ -69,12 +78,17 @@ class MainViewController: BaseViewController {
     
     private func getSectionsFromServer() {
         
+        guard let apiManager = (UIApplication.shared.delegate as? AppDelegate)?.apiManager else { return }
+        
         let sections: Observable<[SectionObject]> = apiManager.send(apiRequest: SectionRequest())
-            
-            sections
+        
+        sections
+            .map({ (items) -> [SectionObject] in
+                return items.sorted(by: { $0.id ?? 0 < $1.id ?? 0 })
+            })
             .bind(to: sectionsTableView.rx.items(cellIdentifier: cellIndentifier)) {
                 index, section, cell in
-                (cell as? SectionTableViewCell)?.configure(section)
+                (cell as? SectionTableViewCell)?.nameLabel.text = section.name
             }
             .disposed(by: disposeBag)
         

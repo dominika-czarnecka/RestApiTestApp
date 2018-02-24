@@ -11,7 +11,7 @@ import UIKit
 extension CGFloat {
     
     static var margin: CGFloat {
-        return 50.0
+        return 8.0
     }
     
     static var cornerRadious: CGFloat {

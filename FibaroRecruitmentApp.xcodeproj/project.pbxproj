@@ -27,6 +27,16 @@
 		157F20A320416A2E00D7880D /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20A220416A2E00D7880D /* Sizes.swift */; };
 		157F20A62041743F00D7880D /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20A52041743F00D7880D /* SectionTableViewCell.swift */; };
 		157F20AA20417B7900D7880D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20A920417B7900D7880D /* BaseTableViewCell.swift */; };
+		157F20AC20418A9D00D7880D /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20AB20418A9D00D7880D /* SectionViewController.swift */; };
+		157F20AE20418F7E00D7880D /* RoomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20AD20418F7E00D7880D /* RoomObject.swift */; };
+		157F20B2204194EB00D7880D /* RoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20B1204194EB00D7880D /* RoomRequest.swift */; };
+		157F20B4204197DC00D7880D /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20B3204197DC00D7880D /* RoomViewController.swift */; };
+		157F20B62041987100D7880D /* DeviceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20B52041987100D7880D /* DeviceObject.swift */; };
+		157F20B820419A7800D7880D /* DevicePropertyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20B720419A7800D7880D /* DevicePropertyObject.swift */; };
+		157F20BA2041A81100D7880D /* DevicesActionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20B92041A81100D7880D /* DevicesActionObject.swift */; };
+		157F20BC2041AA2F00D7880D /* DeviceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20BB2041AA2F00D7880D /* DeviceRequest.swift */; };
+		157F20BE2041AAF200D7880D /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20BD2041AAF200D7880D /* DeviceType.swift */; };
+		157F20C02041ACF200D7880D /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20BF2041ACF200D7880D /* DeviceTableViewCell.swift */; };
 		9E154EFFA483547D5AD61EA4 /* Pods_FibaroRecruitmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5265F95E460DF8C64A4F877 /* Pods_FibaroRecruitmentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +84,16 @@
 		157F20A220416A2E00D7880D /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		157F20A52041743F00D7880D /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
 		157F20A920417B7900D7880D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		157F20AB20418A9D00D7880D /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
+		157F20AD20418F7E00D7880D /* RoomObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomObject.swift; sourceTree = "<group>"; };
+		157F20B1204194EB00D7880D /* RoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRequest.swift; sourceTree = "<group>"; };
+		157F20B3204197DC00D7880D /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		157F20B52041987100D7880D /* DeviceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceObject.swift; sourceTree = "<group>"; };
+		157F20B720419A7800D7880D /* DevicePropertyObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePropertyObject.swift; sourceTree = "<group>"; };
+		157F20B92041A81100D7880D /* DevicesActionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesActionObject.swift; sourceTree = "<group>"; };
+		157F20BB2041AA2F00D7880D /* DeviceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRequest.swift; sourceTree = "<group>"; };
+		157F20BD2041AAF200D7880D /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		157F20BF2041ACF200D7880D /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		294AC85B38312B28B8677916 /* Pods-FibaroRecruitmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5265F95E460DF8C64A4F877 /* Pods_FibaroRecruitmentApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FibaroRecruitmentApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C202C8F6A245698FB3E10C2E /* Pods-FibaroRecruitmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				157F2084204160ED00D7880D /* RequestType.swift */,
+				157F20BD2041AAF200D7880D /* DeviceType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -185,6 +206,10 @@
 			children = (
 				157F2088204160ED00D7880D /* SectionObject.swift */,
 				157F2089204160ED00D7880D /* CentralObject.swift */,
+				157F20AD20418F7E00D7880D /* RoomObject.swift */,
+				157F20B52041987100D7880D /* DeviceObject.swift */,
+				157F20B720419A7800D7880D /* DevicePropertyObject.swift */,
+				157F20B92041A81100D7880D /* DevicesActionObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,6 +229,8 @@
 			children = (
 				157F208D204160EE00D7880D /* CentralRequest.swift */,
 				157F208E204160EE00D7880D /* SectionRequest.swift */,
+				157F20B1204194EB00D7880D /* RoomRequest.swift */,
+				157F20BB2041AA2F00D7880D /* DeviceRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -212,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				157F2091204160EE00D7880D /* MainViewController.swift */,
+				157F20AB20418A9D00D7880D /* SectionViewController.swift */,
+				157F20B3204197DC00D7880D /* RoomViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				157F20A52041743F00D7880D /* SectionTableViewCell.swift */,
+				157F20BF2041ACF200D7880D /* DeviceTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -464,16 +494,26 @@
 				157F20A12041637000D7880D /* BaseViewController.swift in Sources */,
 				157F2094204160EE00D7880D /* SectionObject.swift in Sources */,
 				157F209A204160EE00D7880D /* MainViewController.swift in Sources */,
+				157F20AC20418A9D00D7880D /* SectionViewController.swift in Sources */,
 				157F20A62041743F00D7880D /* SectionTableViewCell.swift in Sources */,
 				157F2097204160EE00D7880D /* CentralRequest.swift in Sources */,
+				157F20B2204194EB00D7880D /* RoomRequest.swift in Sources */,
 				157F209F2041613A00D7880D /* BaseView.swift in Sources */,
 				157F2093204160EE00D7880D /* String+Extensions.swift in Sources */,
 				157F20A320416A2E00D7880D /* Sizes.swift in Sources */,
 				157F2096204160EE00D7880D /* ApiManager.swift in Sources */,
 				157F209E2041613A00D7880D /* CentralInformationView.swift in Sources */,
+				157F20B820419A7800D7880D /* DevicePropertyObject.swift in Sources */,
+				157F20BE2041AAF200D7880D /* DeviceType.swift in Sources */,
+				157F20C02041ACF200D7880D /* DeviceTableViewCell.swift in Sources */,
 				1544FD2120415709001CBBDB /* AppDelegate.swift in Sources */,
+				157F20BC2041AA2F00D7880D /* DeviceRequest.swift in Sources */,
 				157F2098204160EE00D7880D /* SectionRequest.swift in Sources */,
 				157F2095204160EE00D7880D /* CentralObject.swift in Sources */,
+				157F20B4204197DC00D7880D /* RoomViewController.swift in Sources */,
+				157F20AE20418F7E00D7880D /* RoomObject.swift in Sources */,
+				157F20B62041987100D7880D /* DeviceObject.swift in Sources */,
+				157F20BA2041A81100D7880D /* DevicesActionObject.swift in Sources */,
 				157F2099204160EE00D7880D /* APIRequest.swift in Sources */,
 				157F2092204160EE00D7880D /* RequestType.swift in Sources */,
 			);
