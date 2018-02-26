@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class ApiManager {
     
@@ -16,9 +17,16 @@ class ApiManager {
         return Observable<T>.create { observer in
             let request = apiRequest.request(with: self.baseURL)
             let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                
+//                if let error = error {
+//                    observer.onError(error)
+//                    return
+//                }
                 do {
-                    let model: T = try JSONDecoder().decode(T.self, from: data ?? Data())
-                    observer.onNext(model)
+                    if let data = data {
+                        let model: T = try JSONDecoder().decode(T.self, from: data)
+                        observer.onNext(model)
+                    }
                 } catch let error {
                     observer.onError(error)
                 }
@@ -31,4 +39,18 @@ class ApiManager {
             }
         }
     }
+    
+    func sendWithoutResponse(apiRequest: APIRequest) -> Error? {
+        
+        let request = apiRequest.request(with: self.baseURL)
+        var requestError: Error?
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            requestError = error
+        }
+        task.resume()
+        
+        return requestError
+        
+    }
+    
 }

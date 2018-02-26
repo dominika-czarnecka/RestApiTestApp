@@ -16,6 +16,8 @@ class RoomViewController: BaseViewController {
     private var cellIndentifier = "deviceCell"
     private var roomID: Int?
     
+    var devices = Variable<[DeviceObject]>([])
+    
     init(_ room: RoomObject) {
         super.init(nibName: nil, bundle: nil)
         
@@ -51,38 +53,91 @@ class RoomViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getRoomsFromServer()
+        loadDevices()
     }
     
-    private func getRoomsFromServer() {
+    private func loadDevices() {
         
         guard let apiManager = (UIApplication.shared.delegate as? AppDelegate)?.apiManager else { return }
         
-        let rooms: Observable<[DeviceObject]> = apiManager.send(apiRequest: DeviceRequest())
+        Observable<Int>.interval(RxTimeInterval(floatLiteral: 5), scheduler: MainScheduler.instance).asObservable()
+            .flatMap { _ -> Observable<[DeviceObject]> in
+                return apiManager.send(apiRequest: DeviceRequest())
+            }
+            .bind(to: devices)
+            .disposed(by: disposeBag)
         
-        rooms
+        apiManager.send(apiRequest: DeviceRequest())
+            .bind(to: devices)
+            .disposed(by: disposeBag)
+        
+        devices
+            .asObservable()
             .map({ (items) -> [DeviceObject] in
                 return items
                     .filter({
                         return ($0.roomID == self.roomID) && $0.type != .unknown
                     })
-                    .sorted(by: { $0.id ?? 0 < $1.id ?? 0 })
+                    .sorted(by: { $0.id < $1.id })
             })
             .bind(to: devicesTableView.rx.items(cellIdentifier: cellIndentifier)) {
                 index, device, cell in
-                (cell as? DeviceTableViewCell)?.nameLabel.text = device.name
-                (cell as? DeviceTableViewCell)?.turnSwitch.isOn = device.properties?.value != 0
+                
+                guard let cell = cell as? DeviceTableViewCell else { return }
+                
+                cell.nameLabel.text = device.name
+                cell.turnSwitch.isOn = device.properties?.value != 0
+                cell.stateLabel.text = device.properties?.dead == true ? "Dead" : (device.properties?.disabled == true ? "Disabled" : "")
+                
+                if cell.stateLabel.text != "" {
+                    cell.backgroundColor = .lightGray
+                    cell.isUserInteractionEnabled = false
+                }
+                
+                cell.onSwichValueChanged = ({ [weak self] (isOn: Bool) in
+                    self?.onSwichValueChanged(device, isOn: isOn)
+                })
                 
                 if device.type == .dimmableLight {
-                    (cell as? DeviceTableViewCell)?.dimmSlider.setValue(Float(device.properties?.value ?? 0), animated: true)
+                    cell.dimmSlider.setValue(Float(device.properties?.value ?? 0), animated: true)
+                    cell.onSliderValueChanged = ({ [weak self] (value: Float) in
+                        self?.onSliderValueChanged(device, value: Double(value))
+                    })
                 } else {
-                    (cell as? DeviceTableViewCell)?.dimmSlider.isHidden = true
+                    cell.dimmSlider.isHidden = true
                 }
                 
             }
             .disposed(by: disposeBag)
     }
+    
+    func onSwichValueChanged(_ device: DeviceObject, isOn: Bool) {
+        
+        guard let apiManager = (UIApplication.shared.delegate as? AppDelegate)?.apiManager else { return }
+        
+        if let error = apiManager.sendWithoutResponse(apiRequest: TurnRequest(device.id, turnOn: isOn)) {
+            let alert = UIAlertController.createWithOKAction("Error", message: error.localizedDescription)
+            present(alert, animated: true, completion: nil)
+            loadDevices()
+            return
+        }
+        
+    }
+    
+    func onSliderValueChanged(_ device: DeviceObject, value: Double) {
+        
+        guard let apiManager = (UIApplication.shared.delegate as? AppDelegate)?.apiManager else { return }
+        
+        if let error = apiManager.sendWithoutResponse(apiRequest: SetValueRequest(device.id, value: value)) {
+            let alert = UIAlertController.createWithOKAction("Error", message: error.localizedDescription)
+            present(alert, animated: true, completion: nil)
+            loadDevices()
+            return
+            
+        }
 
+    }
+    
 }
 
 extension RoomViewController: UITableViewDelegate {
@@ -94,5 +149,5 @@ extension RoomViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return false
     }
-    
+
 }

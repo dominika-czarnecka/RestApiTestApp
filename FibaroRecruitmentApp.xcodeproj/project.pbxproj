@@ -12,6 +12,8 @@
 		1544FD2B20415709001CBBDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1544FD2920415709001CBBDB /* LaunchScreen.storyboard */; };
 		1544FD3620415709001CBBDB /* FibaroRecruitmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1544FD3520415709001CBBDB /* FibaroRecruitmentAppTests.swift */; };
 		1544FD4120415709001CBBDB /* FibaroRecruitmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1544FD4020415709001CBBDB /* FibaroRecruitmentAppUITests.swift */; };
+		1562C52F20442D020068CDA6 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562C52E20442D020068CDA6 /* UIAlertController+Extension.swift */; };
+		1562C5322044996B0068CDA6 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1562C5302044996B0068CDA6 /* Localized.strings */; };
 		157F2092204160EE00D7880D /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F2084204160ED00D7880D /* RequestType.swift */; };
 		157F2093204160EE00D7880D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F2086204160ED00D7880D /* String+Extensions.swift */; };
 		157F2094204160EE00D7880D /* SectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F2088204160ED00D7880D /* SectionObject.swift */; };
@@ -37,6 +39,8 @@
 		157F20BC2041AA2F00D7880D /* DeviceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20BB2041AA2F00D7880D /* DeviceRequest.swift */; };
 		157F20BE2041AAF200D7880D /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20BD2041AAF200D7880D /* DeviceType.swift */; };
 		157F20C02041ACF200D7880D /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20BF2041ACF200D7880D /* DeviceTableViewCell.swift */; };
+		15B50E55204298D60071DE02 /* TurnRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B50E54204298D60071DE02 /* TurnRequest.swift */; };
+		15B50E57204299EA0071DE02 /* SetValueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B50E56204299EA0071DE02 /* SetValueRequest.swift */; };
 		9E154EFFA483547D5AD61EA4 /* Pods_FibaroRecruitmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5265F95E460DF8C64A4F877 /* Pods_FibaroRecruitmentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +73,9 @@
 		1544FD3C20415709001CBBDB /* FibaroRecruitmentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FibaroRecruitmentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1544FD4020415709001CBBDB /* FibaroRecruitmentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibaroRecruitmentAppUITests.swift; sourceTree = "<group>"; };
 		1544FD4220415709001CBBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1562C52E20442D020068CDA6 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		1562C5312044996B0068CDA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localized.strings; sourceTree = "<group>"; };
+		1562C533204499BE0068CDA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		157F2084204160ED00D7880D /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		157F2086204160ED00D7880D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		157F2088204160ED00D7880D /* SectionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionObject.swift; sourceTree = "<group>"; };
@@ -94,6 +101,8 @@
 		157F20BB2041AA2F00D7880D /* DeviceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRequest.swift; sourceTree = "<group>"; };
 		157F20BD2041AAF200D7880D /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		157F20BF2041ACF200D7880D /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		15B50E54204298D60071DE02 /* TurnRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnRequest.swift; sourceTree = "<group>"; };
+		15B50E56204299EA0071DE02 /* SetValueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetValueRequest.swift; sourceTree = "<group>"; };
 		294AC85B38312B28B8677916 /* Pods-FibaroRecruitmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5265F95E460DF8C64A4F877 /* Pods_FibaroRecruitmentApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FibaroRecruitmentApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C202C8F6A245698FB3E10C2E /* Pods-FibaroRecruitmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +170,7 @@
 				1544FD2720415709001CBBDB /* Assets.xcassets */,
 				1544FD2920415709001CBBDB /* LaunchScreen.storyboard */,
 				1544FD2C20415709001CBBDB /* Info.plist */,
+				1562C5302044996B0068CDA6 /* Localized.strings */,
 			);
 			path = FibaroRecruitmentApp;
 			sourceTree = "<group>";
@@ -197,6 +207,7 @@
 			children = (
 				157F2086204160ED00D7880D /* String+Extensions.swift */,
 				157F20A220416A2E00D7880D /* Sizes.swift */,
+				1562C52E20442D020068CDA6 /* UIAlertController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -231,6 +242,8 @@
 				157F208E204160EE00D7880D /* SectionRequest.swift */,
 				157F20B1204194EB00D7880D /* RoomRequest.swift */,
 				157F20BB2041AA2F00D7880D /* DeviceRequest.swift */,
+				15B50E54204298D60071DE02 /* TurnRequest.swift */,
+				15B50E56204299EA0071DE02 /* SetValueRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -400,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1562C5322044996B0068CDA6 /* Localized.strings in Resources */,
 				1544FD2B20415709001CBBDB /* LaunchScreen.storyboard in Resources */,
 				1544FD2820415709001CBBDB /* Assets.xcassets in Resources */,
 			);
@@ -501,6 +515,7 @@
 				157F209F2041613A00D7880D /* BaseView.swift in Sources */,
 				157F2093204160EE00D7880D /* String+Extensions.swift in Sources */,
 				157F20A320416A2E00D7880D /* Sizes.swift in Sources */,
+				1562C52F20442D020068CDA6 /* UIAlertController+Extension.swift in Sources */,
 				157F2096204160EE00D7880D /* ApiManager.swift in Sources */,
 				157F209E2041613A00D7880D /* CentralInformationView.swift in Sources */,
 				157F20B820419A7800D7880D /* DevicePropertyObject.swift in Sources */,
@@ -508,11 +523,13 @@
 				157F20C02041ACF200D7880D /* DeviceTableViewCell.swift in Sources */,
 				1544FD2120415709001CBBDB /* AppDelegate.swift in Sources */,
 				157F20BC2041AA2F00D7880D /* DeviceRequest.swift in Sources */,
+				15B50E57204299EA0071DE02 /* SetValueRequest.swift in Sources */,
 				157F2098204160EE00D7880D /* SectionRequest.swift in Sources */,
 				157F2095204160EE00D7880D /* CentralObject.swift in Sources */,
 				157F20B4204197DC00D7880D /* RoomViewController.swift in Sources */,
 				157F20AE20418F7E00D7880D /* RoomObject.swift in Sources */,
 				157F20B62041987100D7880D /* DeviceObject.swift in Sources */,
+				15B50E55204298D60071DE02 /* TurnRequest.swift in Sources */,
 				157F20BA2041A81100D7880D /* DevicesActionObject.swift in Sources */,
 				157F2099204160EE00D7880D /* APIRequest.swift in Sources */,
 				157F2092204160EE00D7880D /* RequestType.swift in Sources */,
@@ -557,6 +574,15 @@
 				1544FD2A20415709001CBBDB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1562C5302044996B0068CDA6 /* Localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1562C5312044996B0068CDA6 /* Base */,
+				1562C533204499BE0068CDA6 /* en */,
+			);
+			name = Localized.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

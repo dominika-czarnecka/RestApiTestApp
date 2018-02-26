@@ -10,8 +10,8 @@ import UIKit
 
 struct DevicePropertyObject: Codable {
 
-    let dead: Bool?
-    let disabled: Bool?
+    let dead: Bool
+    let disabled: Bool
     let value: Double?
     
     enum CodingKeys: String, CodingKey {

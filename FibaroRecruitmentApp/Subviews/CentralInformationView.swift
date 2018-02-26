@@ -10,9 +10,9 @@ import UIKit
 
 class CentralInformationView: BaseView {
 
-    private let serialNumberLabel = UILabel()
-    private let macAdressLabel = UILabel()
-    private let softVersionLabel = UILabel()
+    let serialNumberLabel = UILabel()
+    let macAdressLabel = UILabel()
+    let softVersionLabel = UILabel()
     
     override init() {
         super.init()
@@ -70,10 +70,4 @@ class CentralInformationView: BaseView {
         
     }
 
-    func configure(_ object: CentralObject) {
-        serialNumberLabel.text = "\("CentralInformationView.Label.Text.SerialNumber".localized) \(object.serialNumber ?? "")"
-        softVersionLabel.text = "\("CentralInformationView.Label.Text.SoftVersio".localized) \(object.softVersion ?? "")"
-        macAdressLabel.text = "\("CentralInformationView.Label.Text.MacAdress".localized) \(object.mac ?? "")"
-        
-    }
 }

@@ -19,8 +19,8 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getCentralFromServer()
-        getSectionsFromServer()
+        loadCentral()
+        loadSections()
     }
 
     override func configureSubViews() {
@@ -54,6 +54,12 @@ class MainViewController: BaseViewController {
     
     override func bind() {
         
+        sectionsTableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] (indexPath) in
+                self?.sectionsTableView.deselectRow(at: indexPath, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         sectionsTableView.rx.modelSelected(SectionObject.self)
             .subscribe(onNext: { (section) in
                 self.navigationController?.pushViewController(SectionViewController(section), animated: true)
@@ -62,22 +68,29 @@ class MainViewController: BaseViewController {
         
     }
     
-    private func getCentralFromServer() {
+    private func loadCentral() {
 
         guard let apiManager = (UIApplication.shared.delegate as? AppDelegate)?.apiManager else { return }
         
-        let _ = apiManager.send(apiRequest: CentralRequest())
+        let object: Observable<CentralObject> = apiManager.send(apiRequest: CentralRequest())
+            
+        object
+            .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] (object) in
-                DispatchQueue.main.async {
-                    self?.centralInformationView.configure(object)
-                }
+                self?.centralInformationView.serialNumberLabel.text = "\("CentralInformationView.Label.Text.SerialNumber".localized) \(object.serialNumber ?? "")"
+                self?.centralInformationView.softVersionLabel.text = "\("CentralInformationView.Label.Text.SoftVersio".localized) \(object.softVersion ?? "")"
+                self?.centralInformationView.macAdressLabel.text = "\("CentralInformationView.Label.Text.MacAdress".localized) \(object.mac ?? "")"
+                }, onError: { [weak self] (error) in
+                    let alert = UIAlertController.createWithOKAction("Error", message: error.localizedDescription)
+                    self?.present(alert, animated: true, completion: nil)
+                    return
             })
             .disposed(by: disposeBag)
 
     }
     
-    private func getSectionsFromServer() {
-        
+    private func loadSections() {
+
         guard let apiManager = (UIApplication.shared.delegate as? AppDelegate)?.apiManager else { return }
         
         let sections: Observable<[SectionObject]> = apiManager.send(apiRequest: SectionRequest())

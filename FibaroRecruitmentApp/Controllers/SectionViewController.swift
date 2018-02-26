@@ -48,9 +48,15 @@ class SectionViewController: BaseViewController {
     
     override func bind() {
         
+        roomsTableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] (indexPath) in
+                self?.roomsTableView.deselectRow(at: indexPath, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         roomsTableView.rx.modelSelected(RoomObject.self)
-            .subscribe(onNext: { (room) in
-                self.navigationController?.pushViewController(RoomViewController(room), animated: true)
+            .subscribe(onNext: { [weak self] (room) in
+                self?.navigationController?.pushViewController(RoomViewController(room), animated: true)
             })
             .disposed(by: disposeBag)
         

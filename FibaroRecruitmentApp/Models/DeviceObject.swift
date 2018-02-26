@@ -10,7 +10,7 @@ import UIKit
 
 struct DeviceObject: Codable {
     
-    let id: Int?
+    let id: Int
     let name: String?
     let sortOrder: Int?
     let roomID: Int?
