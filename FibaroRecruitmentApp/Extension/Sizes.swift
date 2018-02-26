@@ -15,7 +15,7 @@ extension CGFloat {
     }
     
     static var cornerRadious: CGFloat {
-        return 20
+        return 5
     }
     
     

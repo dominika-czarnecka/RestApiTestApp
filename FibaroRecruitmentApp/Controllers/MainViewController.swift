@@ -19,6 +19,8 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "FibaroRecruitmentApp"
+        
         loadCentral()
         loadSections()
     }
@@ -28,6 +30,8 @@ class MainViewController: BaseViewController {
         centralInformationView.sizeToFit()
         view.addSubview(centralInformationView)
         
+        sectionsTableView.backgroundColor = .mainBlue
+        sectionsTableView.separatorStyle = .none
         sectionsTableView.register(SectionTableViewCell.self, forCellReuseIdentifier: cellIndentifier)
         view.addSubview(sectionsTableView)
         
@@ -39,7 +43,7 @@ class MainViewController: BaseViewController {
         
         NSLayoutConstraint.activate([
             centralInformationView.topAnchor.constraint(equalTo: view.topAnchor, constant: .margin),
-            centralInformationView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            centralInformationView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -.margin * 2),
             centralInformationView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
@@ -77,9 +81,9 @@ class MainViewController: BaseViewController {
         object
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] (object) in
-                self?.centralInformationView.serialNumberLabel.text = "\("CentralInformationView.Label.Text.SerialNumber".localized) \(object.serialNumber ?? "")"
-                self?.centralInformationView.softVersionLabel.text = "\("CentralInformationView.Label.Text.SoftVersio".localized) \(object.softVersion ?? "")"
-                self?.centralInformationView.macAdressLabel.text = "\("CentralInformationView.Label.Text.MacAdress".localized) \(object.mac ?? "")"
+                self?.centralInformationView.serialNumberLabel.text = object.serialNumber?.description
+                self?.centralInformationView.softVersionLabel.text = object.softVersion?.description
+                self?.centralInformationView.macAdressLabel.text = object.mac?.description
                 }, onError: { [weak self] (error) in
                     let alert = UIAlertController.createWithOKAction("Error", message: error.localizedDescription)
                     self?.present(alert, animated: true, completion: nil)
@@ -102,6 +106,7 @@ class MainViewController: BaseViewController {
             .bind(to: sectionsTableView.rx.items(cellIdentifier: cellIndentifier)) {
                 index, section, cell in
                 (cell as? SectionTableViewCell)?.nameLabel.text = section.name
+            
             }
             .disposed(by: disposeBag)
         

@@ -32,24 +32,30 @@ class DeviceTableViewCell: BaseTableViewCell {
     }
     
     override func configureSubviews() {
+        super.configureSubviews()
         
-        nameLabel.textColor = .gray
+        nameLabel.textColor = .mainGray
         nameLabel.adjustsFontSizeToFitWidth = true
         nameLabel.font = UIFont.preferredFont(forTextStyle: .body)
-        addSubview(nameLabel)
+        mainSubview.addSubview(nameLabel)
         
-        addSubview(turnSwitch)
+        turnSwitch.onTintColor = .mainBlue
+        mainSubview.addSubview(turnSwitch)
         
+        dimmSlider.minimumValueImage = #imageLiteral(resourceName: "light-bulb-off")
+        dimmSlider.maximumValueImage = #imageLiteral(resourceName: "light-bulb-on")
+        dimmSlider.minimumTrackTintColor = .mainBlue
         dimmSlider.maximumValue = 100
         dimmSlider.minimumValue = 0
-        addSubview(dimmSlider)
+        mainSubview.addSubview(dimmSlider)
         
         stateLabel.textColor = .red
-        addSubview(stateLabel)
+        mainSubview.addSubview(stateLabel)
         
     }
     
     override func configureConstraints() {
+        super.configureConstraints()
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         turnSwitch.translatesAutoresizingMaskIntoConstraints = false
@@ -57,20 +63,20 @@ class DeviceTableViewCell: BaseTableViewCell {
         stateLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            nameLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: .margin),
-            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: .margin),
+            nameLabel.leftAnchor.constraint(equalTo: mainSubview.leftAnchor, constant: .margin),
+            nameLabel.centerYAnchor.constraint(equalTo: turnSwitch.centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            turnSwitch.rightAnchor.constraint(equalTo: rightAnchor, constant: -.margin),
-            turnSwitch.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor)
+            turnSwitch.rightAnchor.constraint(equalTo: mainSubview.rightAnchor, constant: -.margin),
+            turnSwitch.topAnchor.constraint(equalTo: mainSubview.topAnchor, constant: .margin)
         ])
         
         NSLayoutConstraint.activate([
-            dimmSlider.centerXAnchor.constraint(equalTo: centerXAnchor),
+            dimmSlider.centerXAnchor.constraint(equalTo: mainSubview.centerXAnchor),
             dimmSlider.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: .margin),
-            dimmSlider.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -.margin),
-            dimmSlider.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6)
+            dimmSlider.bottomAnchor.constraint(equalTo: mainSubview.bottomAnchor, constant: -.margin),
+            dimmSlider.widthAnchor.constraint(equalTo: mainSubview.widthAnchor, multiplier: 0.6)
         ])
         
         NSLayoutConstraint.activate([

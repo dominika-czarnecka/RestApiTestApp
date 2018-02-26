@@ -13,7 +13,6 @@
 		1544FD3620415709001CBBDB /* FibaroRecruitmentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1544FD3520415709001CBBDB /* FibaroRecruitmentAppTests.swift */; };
 		1544FD4120415709001CBBDB /* FibaroRecruitmentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1544FD4020415709001CBBDB /* FibaroRecruitmentAppUITests.swift */; };
 		1562C52F20442D020068CDA6 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562C52E20442D020068CDA6 /* UIAlertController+Extension.swift */; };
-		1562C5322044996B0068CDA6 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1562C5302044996B0068CDA6 /* Localized.strings */; };
 		157F2092204160EE00D7880D /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F2084204160ED00D7880D /* RequestType.swift */; };
 		157F2093204160EE00D7880D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F2086204160ED00D7880D /* String+Extensions.swift */; };
 		157F2094204160EE00D7880D /* SectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F2088204160ED00D7880D /* SectionObject.swift */; };
@@ -41,6 +40,7 @@
 		157F20C02041ACF200D7880D /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20BF2041ACF200D7880D /* DeviceTableViewCell.swift */; };
 		15B50E55204298D60071DE02 /* TurnRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B50E54204298D60071DE02 /* TurnRequest.swift */; };
 		15B50E57204299EA0071DE02 /* SetValueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B50E56204299EA0071DE02 /* SetValueRequest.swift */; };
+		15CAA6D62044B0A60091FEBE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAA6D52044B0A60091FEBE /* Colors.swift */; };
 		9E154EFFA483547D5AD61EA4 /* Pods_FibaroRecruitmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5265F95E460DF8C64A4F877 /* Pods_FibaroRecruitmentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,8 +74,6 @@
 		1544FD4020415709001CBBDB /* FibaroRecruitmentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibaroRecruitmentAppUITests.swift; sourceTree = "<group>"; };
 		1544FD4220415709001CBBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1562C52E20442D020068CDA6 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
-		1562C5312044996B0068CDA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localized.strings; sourceTree = "<group>"; };
-		1562C533204499BE0068CDA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		157F2084204160ED00D7880D /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		157F2086204160ED00D7880D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		157F2088204160ED00D7880D /* SectionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionObject.swift; sourceTree = "<group>"; };
@@ -103,6 +101,7 @@
 		157F20BF2041ACF200D7880D /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		15B50E54204298D60071DE02 /* TurnRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnRequest.swift; sourceTree = "<group>"; };
 		15B50E56204299EA0071DE02 /* SetValueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetValueRequest.swift; sourceTree = "<group>"; };
+		15CAA6D52044B0A60091FEBE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		294AC85B38312B28B8677916 /* Pods-FibaroRecruitmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5265F95E460DF8C64A4F877 /* Pods_FibaroRecruitmentApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FibaroRecruitmentApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C202C8F6A245698FB3E10C2E /* Pods-FibaroRecruitmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,7 +169,6 @@
 				1544FD2720415709001CBBDB /* Assets.xcassets */,
 				1544FD2920415709001CBBDB /* LaunchScreen.storyboard */,
 				1544FD2C20415709001CBBDB /* Info.plist */,
-				1562C5302044996B0068CDA6 /* Localized.strings */,
 			);
 			path = FibaroRecruitmentApp;
 			sourceTree = "<group>";
@@ -208,6 +206,7 @@
 				157F2086204160ED00D7880D /* String+Extensions.swift */,
 				157F20A220416A2E00D7880D /* Sizes.swift */,
 				1562C52E20442D020068CDA6 /* UIAlertController+Extension.swift */,
+				15CAA6D52044B0A60091FEBE /* Colors.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -413,7 +412,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1562C5322044996B0068CDA6 /* Localized.strings in Resources */,
 				1544FD2B20415709001CBBDB /* LaunchScreen.storyboard in Resources */,
 				1544FD2820415709001CBBDB /* Assets.xcassets in Resources */,
 			);
@@ -505,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				157F20AA20417B7900D7880D /* BaseTableViewCell.swift in Sources */,
+				15CAA6D62044B0A60091FEBE /* Colors.swift in Sources */,
 				157F20A12041637000D7880D /* BaseViewController.swift in Sources */,
 				157F2094204160EE00D7880D /* SectionObject.swift in Sources */,
 				157F209A204160EE00D7880D /* MainViewController.swift in Sources */,
@@ -574,15 +573,6 @@
 				1544FD2A20415709001CBBDB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		1562C5302044996B0068CDA6 /* Localized.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1562C5312044996B0068CDA6 /* Base */,
-				1562C533204499BE0068CDA6 /* en */,
-			);
-			name = Localized.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

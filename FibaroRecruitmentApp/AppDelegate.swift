@@ -20,7 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let navigationController = UINavigationController(rootViewController: MainViewController())
         navigationController.navigationBar.isTranslucent = false
-        
+        navigationController.navigationBar.barTintColor = .mainBlue
+        navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.barStyle = .blackTranslucent
+
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         

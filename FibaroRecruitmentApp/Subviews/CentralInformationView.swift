@@ -25,18 +25,18 @@ class CentralInformationView: BaseView {
     override func configureSubviews() {
         super.configureSubviews()
         
-        serialNumberLabel.textColor = UIColor.gray
+        serialNumberLabel.textColor = .white
         serialNumberLabel.textAlignment = .center
         addSubview(serialNumberLabel)
         
-        macAdressLabel.textColor = .lightGray
+        macAdressLabel.textColor = .white
         macAdressLabel.adjustsFontSizeToFitWidth = true
-        macAdressLabel.textAlignment = .center
+        macAdressLabel.textAlignment = .left
         addSubview(macAdressLabel)
         
-        softVersionLabel.textColor = .lightGray
+        softVersionLabel.textColor = .white
         softVersionLabel.adjustsFontSizeToFitWidth = true
-        softVersionLabel.textAlignment = .center
+        softVersionLabel.textAlignment = .right
         addSubview(softVersionLabel)
         
     }

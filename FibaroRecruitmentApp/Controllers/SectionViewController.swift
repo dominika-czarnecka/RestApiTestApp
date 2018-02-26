@@ -35,6 +35,8 @@ class SectionViewController: BaseViewController {
     
     override func configureConstraints() {
         
+        roomsTableView.separatorStyle = .none
+        roomsTableView.backgroundColor = .mainBlue
         roomsTableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([

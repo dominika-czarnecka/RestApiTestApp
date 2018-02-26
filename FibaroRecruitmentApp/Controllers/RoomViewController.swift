@@ -31,6 +31,8 @@ class RoomViewController: BaseViewController {
     
     override func configureSubViews() {
         
+        devicesTableView.separatorStyle = .none
+        devicesTableView.backgroundColor = .mainBlue
         devicesTableView.delegate = self
         devicesTableView.estimatedRowHeight = UITableViewAutomaticDimension
         devicesTableView.register(DeviceTableViewCell.self, forCellReuseIdentifier: cellIndentifier)
@@ -60,7 +62,7 @@ class RoomViewController: BaseViewController {
         
         guard let apiManager = (UIApplication.shared.delegate as? AppDelegate)?.apiManager else { return }
         
-        Observable<Int>.interval(RxTimeInterval(floatLiteral: 5), scheduler: MainScheduler.instance).asObservable()
+        Observable<Int>.interval(RxTimeInterval(floatLiteral: 10), scheduler: MainScheduler.instance).asObservable()
             .flatMap { _ -> Observable<[DeviceObject]> in
                 return apiManager.send(apiRequest: DeviceRequest())
             }
@@ -90,7 +92,7 @@ class RoomViewController: BaseViewController {
                 cell.stateLabel.text = device.properties?.dead == true ? "Dead" : (device.properties?.disabled == true ? "Disabled" : "")
                 
                 if cell.stateLabel.text != "" {
-                    cell.backgroundColor = .lightGray
+                    cell.mainSubview.backgroundColor = .lightGray
                     cell.isUserInteractionEnabled = false
                 }
                 
@@ -118,7 +120,6 @@ class RoomViewController: BaseViewController {
         if let error = apiManager.sendWithoutResponse(apiRequest: TurnRequest(device.id, turnOn: isOn)) {
             let alert = UIAlertController.createWithOKAction("Error", message: error.localizedDescription)
             present(alert, animated: true, completion: nil)
-            loadDevices()
             return
         }
         
@@ -131,7 +132,6 @@ class RoomViewController: BaseViewController {
         if let error = apiManager.sendWithoutResponse(apiRequest: SetValueRequest(device.id, value: value)) {
             let alert = UIAlertController.createWithOKAction("Error", message: error.localizedDescription)
             present(alert, animated: true, completion: nil)
-            loadDevices()
             return
             
         }

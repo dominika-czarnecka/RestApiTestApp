@@ -10,13 +10,10 @@ import UIKit
 
 class SectionTableViewCell: BaseTableViewCell {
 
-    private let mainSubview = UIView()
     let nameLabel = UILabel()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        backgroundColor = UIColor.clear
         
     }
     
@@ -25,34 +22,24 @@ class SectionTableViewCell: BaseTableViewCell {
     }
 
     override func configureSubviews() {
-        
-        mainSubview.backgroundColor = .white
-        mainSubview.layer.cornerRadius = .cornerRadious
-        addSubview(mainSubview)
+        super.configureSubviews()
         
         nameLabel.textAlignment = .center
         nameLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        nameLabel.textColor = .gray
-        addSubview(nameLabel)
+        nameLabel.textColor = .mainGray
+        mainSubview.addSubview(nameLabel)
         
     }
     
     override func configureConstraints() {
+        super.configureConstraints()
         
-        mainSubview.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            mainSubview.centerYAnchor.constraint(equalTo: centerYAnchor),
-            mainSubview.centerXAnchor.constraint(equalTo: centerXAnchor),
-            mainSubview.heightAnchor.constraint(equalTo: heightAnchor, constant: -.margin * 2),
-            mainSubview.widthAnchor.constraint(equalTo: widthAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
             nameLabel.centerXAnchor.constraint(equalTo: mainSubview.centerXAnchor),
-            nameLabel.topAnchor.constraint(equalTo: mainSubview.topAnchor, constant: .margin),
-            nameLabel.bottomAnchor.constraint(equalTo: mainSubview.bottomAnchor, constant: -.margin),
+            nameLabel.topAnchor.constraint(equalTo: mainSubview.topAnchor, constant: .margin * 2),
+            nameLabel.bottomAnchor.constraint(equalTo: mainSubview.bottomAnchor, constant: -.margin * 2),
             nameLabel.widthAnchor.constraint(equalTo: widthAnchor)
         ])
         

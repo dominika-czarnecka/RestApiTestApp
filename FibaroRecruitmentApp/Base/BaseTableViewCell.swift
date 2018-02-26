@@ -10,11 +10,15 @@ import UIKit
 
 class BaseTableViewCell: UITableViewCell {
 
+    internal let mainSubview = UIView()
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        backgroundColor = .mainBlue
         configureSubviews()
         configureConstraints()
+        selectionStyle = .none
         
     }
     
@@ -22,8 +26,24 @@ class BaseTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    internal func configureSubviews() { }
+    internal func configureSubviews() {
+        
+        mainSubview.backgroundColor = .white
+        mainSubview.layer.cornerRadius = .cornerRadious
+        addSubview(mainSubview)
+    }
     
-    internal func configureConstraints() { }
-    
+    internal func configureConstraints() {
+        
+        mainSubview.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            mainSubview.centerYAnchor.constraint(equalTo: centerYAnchor),
+            mainSubview.centerXAnchor.constraint(equalTo: centerXAnchor),
+            mainSubview.heightAnchor.constraint(equalTo: heightAnchor, constant: -.margin * 2),
+            mainSubview.widthAnchor.constraint(equalTo: widthAnchor)
+            ])
+        
+    }
+
 }
