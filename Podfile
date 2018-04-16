@@ -7,15 +7,16 @@ use_frameworks!
 
 def import_common_pods
 	
-	pod 'KVNProgress'
 	pod 'RxSwift'
 	pod 'RxCocoa'
-	pod 'RxDataSources'
-	pod 'KeychainAccess'
     
 end
 
 target 'FibaroRecruitmentApp' do
+  import_common_pods
+end
+
+target 'FibaroRecruitmentAppTests' do
   import_common_pods
 end
 

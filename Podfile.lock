@@ -1,30 +1,16 @@
 PODS:
-  - Differentiator (3.0.2)
-  - KeychainAccess (3.1.0)
-  - KVNProgress (2.3.1)
   - RxCocoa (4.1.0):
-    - RxSwift (~> 4.0)
-  - RxDataSources (3.0.2):
-    - Differentiator (~> 3.0)
-    - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.1.0)
 
 DEPENDENCIES:
-  - KeychainAccess
-  - KVNProgress
   - RxCocoa
-  - RxDataSources
   - RxSwift
 
 SPEC CHECKSUMS:
-  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
-  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
-  KVNProgress: 8167b1f19e2758290c0b6143020ed9dcbb0477a1
   RxCocoa: cc1fec49cdc8fabe645964de7c51c099a36c2aa8
-  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
 
-PODFILE CHECKSUM: 7a349d4b47bcdb60b7d875ca81f295542a1d852b
+PODFILE CHECKSUM: aadf6e05bb24d2986ac192d42b3f5c9859542f4e
 
 COCOAPODS: 1.3.1

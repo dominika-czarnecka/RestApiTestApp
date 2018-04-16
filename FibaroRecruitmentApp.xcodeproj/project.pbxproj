@@ -40,7 +40,24 @@
 		157F20C02041ACF200D7880D /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20BF2041ACF200D7880D /* DeviceTableViewCell.swift */; };
 		15B50E55204298D60071DE02 /* TurnRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B50E54204298D60071DE02 /* TurnRequest.swift */; };
 		15B50E57204299EA0071DE02 /* SetValueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B50E56204299EA0071DE02 /* SetValueRequest.swift */; };
+		15C00D70F39ED501A4C59E9A /* Pods_FibaroRecruitmentAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BCB5E4228090F39D488380A /* Pods_FibaroRecruitmentAppTests.framework */; };
 		15CAA6D62044B0A60091FEBE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAA6D52044B0A60091FEBE /* Colors.swift */; };
+		15CAA6EC2044C9130091FEBE /* TestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAA6D72044C7110091FEBE /* TestApiManager.swift */; };
+		15CAA6ED2044C91C0091FEBE /* SectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F2088204160ED00D7880D /* SectionObject.swift */; };
+		15CAA6EE2044C91C0091FEBE /* CentralObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F2089204160ED00D7880D /* CentralObject.swift */; };
+		15CAA6EF2044C91C0091FEBE /* RoomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20AD20418F7E00D7880D /* RoomObject.swift */; };
+		15CAA6F02044C91C0091FEBE /* DeviceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20B52041987100D7880D /* DeviceObject.swift */; };
+		15CAA6F12044C91C0091FEBE /* DevicePropertyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20B720419A7800D7880D /* DevicePropertyObject.swift */; };
+		15CAA6F22044C91C0091FEBE /* DevicesActionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20B92041A81100D7880D /* DevicesActionObject.swift */; };
+		15CAA6F32044C9220091FEBE /* CentralRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F208D204160EE00D7880D /* CentralRequest.swift */; };
+		15CAA6F42044C9220091FEBE /* SectionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F208E204160EE00D7880D /* SectionRequest.swift */; };
+		15CAA6F52044C9220091FEBE /* RoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20B1204194EB00D7880D /* RoomRequest.swift */; };
+		15CAA6F62044C9220091FEBE /* DeviceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20BB2041AA2F00D7880D /* DeviceRequest.swift */; };
+		15CAA6F72044C9220091FEBE /* TurnRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B50E54204298D60071DE02 /* TurnRequest.swift */; };
+		15CAA6F82044C9220091FEBE /* SetValueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B50E56204299EA0071DE02 /* SetValueRequest.swift */; };
+		15CAA6F9204554EC0091FEBE /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F208F204160EE00D7880D /* APIRequest.swift */; };
+		15CAA6FA204554FE0091FEBE /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F2084204160ED00D7880D /* RequestType.swift */; };
+		15CAA6FB204555050091FEBE /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F20BD2041AAF200D7880D /* DeviceType.swift */; };
 		9E154EFFA483547D5AD61EA4 /* Pods_FibaroRecruitmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5265F95E460DF8C64A4F877 /* Pods_FibaroRecruitmentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042EC60B8705FDB44AD3097C /* Pods-FibaroRecruitmentAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentAppTests/Pods-FibaroRecruitmentAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		1544FD1D20415709001CBBDB /* FibaroRecruitmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FibaroRecruitmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1544FD2020415709001CBBDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1544FD2720415709001CBBDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,7 +120,10 @@
 		15B50E54204298D60071DE02 /* TurnRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnRequest.swift; sourceTree = "<group>"; };
 		15B50E56204299EA0071DE02 /* SetValueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetValueRequest.swift; sourceTree = "<group>"; };
 		15CAA6D52044B0A60091FEBE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		15CAA6D72044C7110091FEBE /* TestApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiManager.swift; sourceTree = "<group>"; };
 		294AC85B38312B28B8677916 /* Pods-FibaroRecruitmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5545BEE9D5C4C3595558FFD7 /* Pods-FibaroRecruitmentAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentAppTests/Pods-FibaroRecruitmentAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5BCB5E4228090F39D488380A /* Pods_FibaroRecruitmentAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FibaroRecruitmentAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5265F95E460DF8C64A4F877 /* Pods_FibaroRecruitmentApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FibaroRecruitmentApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C202C8F6A245698FB3E10C2E /* Pods-FibaroRecruitmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FibaroRecruitmentApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C00D70F39ED501A4C59E9A /* Pods_FibaroRecruitmentAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +198,7 @@
 		1544FD3420415709001CBBDB /* FibaroRecruitmentAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				15CAA6D72044C7110091FEBE /* TestApiManager.swift */,
 				1544FD3520415709001CBBDB /* FibaroRecruitmentAppTests.swift */,
 				1544FD3720415709001CBBDB /* Info.plist */,
 			);
@@ -289,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				B5265F95E460DF8C64A4F877 /* Pods_FibaroRecruitmentApp.framework */,
+				5BCB5E4228090F39D488380A /* Pods_FibaroRecruitmentAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -298,6 +322,8 @@
 			children = (
 				294AC85B38312B28B8677916 /* Pods-FibaroRecruitmentApp.debug.xcconfig */,
 				C202C8F6A245698FB3E10C2E /* Pods-FibaroRecruitmentApp.release.xcconfig */,
+				5545BEE9D5C4C3595558FFD7 /* Pods-FibaroRecruitmentAppTests.debug.xcconfig */,
+				042EC60B8705FDB44AD3097C /* Pods-FibaroRecruitmentAppTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -329,9 +355,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1544FD4820415709001CBBDB /* Build configuration list for PBXNativeTarget "FibaroRecruitmentAppTests" */;
 			buildPhases = (
+				784AEB1A1A886F106E4294B3 /* [CP] Check Pods Manifest.lock */,
 				1544FD2D20415709001CBBDB /* Sources */,
 				1544FD2E20415709001CBBDB /* Frameworks */,
 				1544FD2F20415709001CBBDB /* Resources */,
+				A93F9B9CD59CD3F37B1C5E9C /* [CP] Embed Pods Frameworks */,
+				19FDD4F6EB79446D6765264B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -434,6 +463,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		19FDD4F6EB79446D6765264B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FibaroRecruitmentAppTests/Pods-FibaroRecruitmentAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		353F9A0AF8372D7C83C60C47 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -456,25 +500,55 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FibaroRecruitmentApp/Pods-FibaroRecruitmentApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		784AEB1A1A886F106E4294B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FibaroRecruitmentAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A93F9B9CD59CD3F37B1C5E9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FibaroRecruitmentAppTests/Pods-FibaroRecruitmentAppTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FibaroRecruitmentAppTests/Pods-FibaroRecruitmentAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AC94F82CB677BE8A40F2B5A7 /* [CP] Check Pods Manifest.lock */ = {
@@ -539,7 +613,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15CAA6F02044C91C0091FEBE /* DeviceObject.swift in Sources */,
+				15CAA6ED2044C91C0091FEBE /* SectionObject.swift in Sources */,
+				15CAA6F52044C9220091FEBE /* RoomRequest.swift in Sources */,
+				15CAA6F62044C9220091FEBE /* DeviceRequest.swift in Sources */,
+				15CAA6F82044C9220091FEBE /* SetValueRequest.swift in Sources */,
+				15CAA6EC2044C9130091FEBE /* TestApiManager.swift in Sources */,
+				15CAA6EE2044C91C0091FEBE /* CentralObject.swift in Sources */,
+				15CAA6FB204555050091FEBE /* DeviceType.swift in Sources */,
+				15CAA6FA204554FE0091FEBE /* RequestType.swift in Sources */,
+				15CAA6F22044C91C0091FEBE /* DevicesActionObject.swift in Sources */,
+				15CAA6F42044C9220091FEBE /* SectionRequest.swift in Sources */,
 				1544FD3620415709001CBBDB /* FibaroRecruitmentAppTests.swift in Sources */,
+				15CAA6EF2044C91C0091FEBE /* RoomObject.swift in Sources */,
+				15CAA6F12044C91C0091FEBE /* DevicePropertyObject.swift in Sources */,
+				15CAA6F32044C9220091FEBE /* CentralRequest.swift in Sources */,
+				15CAA6F9204554EC0091FEBE /* APIRequest.swift in Sources */,
+				15CAA6F72044C9220091FEBE /* TurnRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +809,7 @@
 		};
 		1544FD4920415709001CBBDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5545BEE9D5C4C3595558FFD7 /* Pods-FibaroRecruitmentAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -736,6 +827,7 @@
 		};
 		1544FD4A20415709001CBBDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042EC60B8705FDB44AD3097C /* Pods-FibaroRecruitmentAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
