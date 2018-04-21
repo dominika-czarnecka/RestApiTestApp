@@ -6,17 +6,13 @@ inhibit_all_warnings!
 use_frameworks!
 
 def import_common_pods
-	
+
 	pod 'RxSwift'
 	pod 'RxCocoa'
-    
+
 end
 
-target 'FibaroRecruitmentApp' do
-  import_common_pods
-end
-
-target 'FibaroRecruitmentAppTests' do
+target 'RestApiTestApp' do
   import_common_pods
 end
 
